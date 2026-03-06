@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import heroPhoto from "../assets/photos/hero-photo.webp";
+---
+
+<section>
+  <Image
+    src={heroPhoto}
+    alt="Imagen de la casa"
+    widths={[480, 720, 1080, 1440, 1800]}
+    sizes="(max-width: 1800px) 100vw, 1800px"
+    class="w-full h-full object-cover"
+  />
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"
+  >
+  </div>
+</section>
