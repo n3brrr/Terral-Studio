@@ -7,7 +7,7 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Terral Estudio</title>
+    <title>Terral Studio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
@@ -17,7 +17,9 @@ import "../styles/global.css";
       rel="stylesheet"
     />
   </head>
-  <body class="bg-background text-text">
+  <body
+    class="bg-background antialiased selection:bg-accent selection:text-background"
+  >
     <slot />
   </body>
 </html>

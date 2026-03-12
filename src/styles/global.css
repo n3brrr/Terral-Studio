@@ -1,2 +1,7 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
+
+@theme {
+  --color-background: #0f1115;
+  --color-surface: #1a1d23;
+  --color-accent: #d4a373;
+}
