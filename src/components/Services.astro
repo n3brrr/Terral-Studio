@@ -1,40 +1,46 @@
 ---
-import { p } from "framer-motion/m";
+
 ---
 
-<section class="w-full h-screen bg-surface">
+<section class="w-full h-screen bg-surface" id="services">
   <div class="w-full h-full flex flex-col pt-10">
     <h2
       class="text-6xl font-bold text-white/90 md:text-8xl tracking-tighter px-12"
     >
       Nuestros Servicios
     </h2>
-    <div class="gird grid-cols-1 md:grid-cols-4 gap-6 text-white/80 m-10">
+    <div class="gird grid-cols-2 md:grid-cols-3 gap-6 text-white/80 m-10">
       <div
-        class="bg-surface-secondary rounded-xl p-6 bg-white-5 backdrop-blur-md border border-white/10 mt-10 mb-10"
+        class="rounded-xl p-6 bg-white-5 backdrop-blur-md border border-white/10 mt-10 mb-10 max-w-115 max-h-200"
       >
         <img
           src="/src/assets/photos/OurServices-01.webp"
           alt="Foto Servicio 1"
-          class="max-w-100 h-auto"
+          class="max-w-100 h-auto rounded-xl"
         />
-        <p>01</p>
-        <h3 class="text-2xl font-bold">Servicio 1</h3>
-        <p>Descripción del servicio 1</p>
+        <p class="text-6xl font-extrabold my-5">01</p>
+        <h3 class="text-2xl font-bold my-2">Enseñar las casas</h3>
+        <p class="text-white/80 sm:text-sm">
+          Ofrecemos recorridos virtuales inmersivos que permiten a los clientes
+          explorar cada rincón de la propiedad desde la comodidad de su hogar.
+        </p>
       </div>
-      <!--   <div
-        class="bg-surface-secondary rounded-xl p-6 bg-white-5 backdrop-blur-md border border-white/10 mt-10 mb-10"
+      <!-- <div
+        class="rounded-xl p-6 bg-white-5 backdrop-blur-md border border-white/10 mt-10 mb-10 max-w-115 max-h-200"
       >
         <img
           src="/src/assets/photos/OurServices-02.webp"
           alt="Foto Servicio 2"
-          class="max-w-100 h-auto"
+          class="max-w-100 h-auto rounded-xl"
         />
-        <p>02</p>
-        <h3 class="text-2xl font-bold">Servicio 2</h3>
-        <p>Descripción del servicio 2</p>
+        <p class="text-6xl font-extrabold my-5">02</p>
+        <h3 class="text-2xl font-bold my-2">Planteamiento del sitio</h3>
+        <p class="text-white/80 sm:text-sm">
+          Analizamos tu terreno para diseñar la casa perfecta que se adapte al
+          entorno y a tus necesidades.
+        </p>
       </div>
-      <div
+       <div
         class="bg-surface-secondary rounded-xl p-6 bg-white-5 backdrop-blur-md border border-white/10 mt-10 mb-10"
       >
         <img

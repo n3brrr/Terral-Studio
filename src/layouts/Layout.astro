@@ -18,8 +18,26 @@ import "../styles/global.css";
     />
   </head>
   <body
-    class="bg-background antialiased selection:bg-accent selection:text-background"
+    class="bg-background antialiased selection:bg-accent selection:text-background scrollbar-hidden"
   >
     <slot />
+    <script>
+      import Lenis from "lenis";
+
+      const lenis = new Lenis({
+        duration: 1.2,
+        smooth: true,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      });
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
   </body>
 </html>

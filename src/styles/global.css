@@ -5,3 +5,10 @@
   --color-surface: #1a1d23;
   --color-accent: #d4a373;
 }
+
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
