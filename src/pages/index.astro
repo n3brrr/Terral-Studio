@@ -4,7 +4,7 @@ import Hero from "../components/Hero.astro";
 import Navbar from "../components/Navbar.astro";
 import Services from "../components/Services.astro";
 import HousePlan from "../components/HousePlan.astro";
-import Proyects from "../components/Proyects.astro";
+import Proyects from "../components/Proyects.tsx";
 import Reviews from "../components/Reviews.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -14,7 +14,7 @@ import Footer from "../components/Footer.astro";
   <Navbar />
   <Services />
   <HousePlan />
-  <Proyects />
+  <Proyects client:load />
   <Reviews />
   <Footer />
 </Layout>
