@@ -13,28 +13,36 @@ import { REVIEWS } from "../lib/reviews.ts";
 import { cn } from "../lib/utils.ts";
 
 // Componente individual de cada tarjeta
-const ReviewCard = ({
-  name,
-  role,
-  body,
-  img,
-}: {
-  name: string;
-  role: string;
-  body: string;
-  img: string;
-}) => (
-  <div className="w-[350px] md:w-[450px] p-8 rounded-[32px] bg-surface border border-white/10 flex flex-col gap-4 shrink-0 mx-4">
-    <p className="text-white/90 text-lg font-light leading-relaxed italic">
+const ReviewCard = ({ name, role, body, img }: any) => (
+  <div
+    className="
+    /* Tamaño y Forma */
+    w-[350px] md:w-[450px] shrink-0 mx-4 p-8 rounded-[32px] 
+    
+    /* Fondo y Bordes */
+    bg-white/3 border border-white/10 backdrop-blur-sm
+    
+    /* Sombra suave para dar profundidad */
+    shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]
+    
+    /* Interacción */
+    transition-all duration-300 hover:bg-white/6 hover:border-white/20
+    
+    flex flex-col gap-4
+  "
+  >
+    {/* Contenido de la Card */}
+    <p className="text-white/80 text-lg font-light leading-relaxed italic font-display text-balance">
       "{body}"
     </p>
+
     <div className="flex items-center gap-4 mt-4">
-      <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10">
+      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent/30 shadow-lg shadow-accent/10">
         <img src={img} alt={name} className="w-full h-full object-cover" />
       </div>
       <div>
-        <p className="font-bold text-white text-sm">{name}</p>
-        <p className="text-white/40 text-xs uppercase tracking-widest">
+        <p className="font-bold text-white/90 text-lg tracking-tight">{name}</p>
+        <p className="text-accent/60 text-[10px] uppercase tracking-[0.2em] font-medium">
           {role}
         </p>
       </div>
@@ -101,41 +109,42 @@ export default function Reviews() {
     <section className="py-24 bg-background relative overflow-hidden">
       {/* Máscaras laterales para un efecto elegante */}
       <div
-        className="absolute inset-0 z-10 pointer-events-none"
+        className="relative w-full"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent)",
         }}
-      />
-      <h2 className="text-6xl md:text-8xl font-bold text-white mb-20 tracking-tighter px-10">
-        Opiniones
-      </h2>
+      >
+        <h2 className="text-6xl md:text-8xl font-bold text-white mb-20 tracking-tighter px-10">
+          Opiniones
+        </h2>
 
-      <div className="flex flex-col gap-6 ">
-        <VelocityRow baseVelocity={-0.3}>
-          {REVIEWS.map((review) => (
-            <ReviewCard
-              key={review.id}
-              name={review.name}
-              role={review.role}
-              body={review.body}
-              img={review.img.src}
-            />
-          ))}
-        </VelocityRow>
-        <VelocityRow baseVelocity={0.4}>
-          {REVIEWS.map((review) => (
-            <ReviewCard
-              key={`rev-2-${review.id}`}
-              name={review.name}
-              role={review.role}
-              body={review.body}
-              img={review.img.src}
-            />
-          ))}
-        </VelocityRow>
+        <div className="flex flex-col gap-6 ">
+          <VelocityRow baseVelocity={-0.2}>
+            {REVIEWS.map((review) => (
+              <ReviewCard
+                key={review.id}
+                name={review.name}
+                role={review.role}
+                body={review.body}
+                img={review.img.src}
+              />
+            ))}
+          </VelocityRow>
+          <VelocityRow baseVelocity={0.2}>
+            {REVIEWS.map((review) => (
+              <ReviewCard
+                key={`rev-2-${review.id}`}
+                name={review.name}
+                role={review.role}
+                body={review.body}
+                img={review.img.src}
+              />
+            ))}
+          </VelocityRow>
+        </div>
       </div>
     </section>
   );
