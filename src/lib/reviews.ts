@@ -1,8 +1,8 @@
-import user1 from "../assets/photos/user1.webp";
-import user2 from "../assets/photos/user2.webp";
-import user3 from "../assets/photos/user3.webp";
-import user4 from "../assets/photos/user4.webp";
-import user5 from "../assets/photos/user5.webp";
+import user1 from "../assets/photos/User/user1.webp";
+import user2 from "../assets/photos/User/user2.webp";
+import user3 from "../assets/photos/User/user3.webp";
+import user4 from "../assets/photos/User/user4.webp";
+import user5 from "../assets/photos/User/user5.webp";
 
 export const REVIEWS = [
   {

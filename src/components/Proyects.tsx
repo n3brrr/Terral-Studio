@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import { LayoutGrid } from "./ui/layout-grid";
-import imagen1 from "../assets/photos/Villa-01.webp";
-import imagen2 from "../assets/photos/Villa-02.webp";
-import imagen3 from "../assets/photos/Villa-03.webp";
-import imagen4 from "../assets/photos/Villa-04.webp";
-import imagen5 from "../assets/photos/Villa-05.webp";
-import imagen6 from "../assets/photos/Villa-06.webp";
-import imagen7 from "../assets/photos/Villa-07.webp";
+import imagen1 from "../assets/photos/Villa/Villa-01.webp";
+import imagen2 from "../assets/photos/Villa/Villa-02.webp";
+import imagen3 from "../assets/photos/Villa/Villa-03.webp";
+import imagen4 from "../assets/photos/Villa/Villa-04.webp";
+import imagen5 from "../assets/photos/Villa/Villa-05.webp";
+import imagen6 from "../assets/photos/Villa/Villa-06.webp";
+import imagen7 from "../assets/photos/Villa/Villa-07.webp";
 
 const SkeletonOne = () => (
   <div className="flex flex-col justify-end p-4">

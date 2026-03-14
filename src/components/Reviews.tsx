@@ -10,7 +10,6 @@ import {
   useMotionValue,
 } from "framer-motion";
 import { REVIEWS } from "../lib/reviews.ts";
-import { cn } from "../lib/utils.ts";
 
 // Componente individual de cada tarjeta
 const ReviewCard = ({ name, role, body, img }: any) => (
@@ -106,7 +105,10 @@ function VelocityRow({
 
 export default function Reviews() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section
+      className="py-24 bg-background relative overflow-hidden"
+      id="reviews"
+    >
       {/* Máscaras laterales para un efecto elegante */}
       <div
         className="relative w-full"

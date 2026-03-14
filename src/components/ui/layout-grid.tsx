@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "../../lib/utils"; // Aquí apuntas a tu archivo utils
+import { cn } from "../../lib/utils";
 
 export const LayoutGrid = ({ cards }: { cards: any[] }) => {
   const [selected, setSelected] = useState<any | null>(null);
