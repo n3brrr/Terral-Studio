@@ -39,7 +39,6 @@ export const LayoutGrid = ({ cards }: { cards: any[] }) => {
           </motion.div>
         </div>
       ))}
-      1
     </div>
   );
 };
