@@ -1,13 +1,6 @@
 "use client";
 import React from "react";
 import { LayoutGrid } from "./ui/layout-grid";
-import imagen1 from "../assets/photos/Villa/Villa-01.webp";
-import imagen2 from "../assets/photos/Villa/Villa-02.webp";
-import imagen3 from "../assets/photos/Villa/Villa-03.webp";
-import imagen4 from "../assets/photos/Villa/Villa-04.webp";
-import imagen5 from "../assets/photos/Villa/Villa-05.webp";
-import imagen6 from "../assets/photos/Villa/Villa-06.webp";
-import imagen7 from "../assets/photos/Villa/Villa-07.webp";
 
 const SkeletonOne = () => (
   <div className="flex flex-col justify-end p-4">
@@ -63,43 +56,43 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "md:col-span-1",
-    thumbnail: imagen4.src,
+    thumbnail: "/photos/Villa/Villa-04.webp",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "md:col-span-2",
-    thumbnail: imagen2.src,
+    thumbnail: "/photos/Villa/Villa-02.webp",
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "md:col-span-2",
-    thumbnail: imagen3.src,
+    thumbnail: "/photos/Villa/Villa-03.webp",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-1",
-    thumbnail: imagen7.src,
+    thumbnail: "/photos/Villa/Villa-07.webp",
   },
   {
     id: 5,
     content: <SkeletonFive />,
     className: "md:col-span-3",
-    thumbnail: imagen1.src,
+    thumbnail: "/photos/Villa/Villa-01.webp",
   },
   {
     id: 6,
     content: <SkeletonSix />,
     className: "md:col-span-1",
-    thumbnail: imagen5.src,
+    thumbnail: "/photos/Villa/Villa-05.webp",
   },
   {
     id: 7,
     content: <SkeletonSeven />,
     className: "md:col-span-2",
-    thumbnail: imagen6.src,
+    thumbnail: "/photos/Villa/Villa-06.webp",
   },
 ];
 

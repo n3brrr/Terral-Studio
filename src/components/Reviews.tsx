@@ -131,7 +131,7 @@ export default function Reviews() {
                 name={review.name}
                 role={review.role}
                 body={review.body}
-                img={review.img.src}
+                img={review.img}
               />
             ))}
           </VelocityRow>
@@ -142,7 +142,7 @@ export default function Reviews() {
                 name={review.name}
                 role={review.role}
                 body={review.body}
-                img={review.img.src}
+                img={review.img}
               />
             ))}
           </VelocityRow>
