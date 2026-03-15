@@ -1,27 +1,44 @@
 ---
-
+import { Meteors } from "./ui/meteors";
 ---
 
-<section id="footer" class="bg-surface text-white">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 m-10 pt-10">
-    <div class="text-center">
-      <h2 class="uppercase">Contacto</h2>
-      <p>Email: terralstudio@gmail.com</p>
-      <p>Telefono: +57 312 345 6789</p>
+<footer
+  id="footer"
+  class="relative bg-surface text-white py-20 overflow-hidden"
+>
+  <Meteors client:load number={10} />
+
+  <div class="relative z-10 container mx-auto px-6">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 text-center align-center md:text-left"
+    >
+      <div class="space-y-4">
+        <h2 class="uppercase font-bold text-accent tracking-widest">
+          Contacto
+        </h2>
+        <p class="text-white/70">Email: terralstudio@gmail.com</p>
+        <p class="text-white/70">Telefono: +34 000 999 000</p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="uppercase font-bold text-accent tracking-widest">
+          Redes Sociales
+        </h2>
+        <p class="text-white/70">Instagram: @terralstudio</p>
+        <p class="text-white/70">Facebook: @terralstudio</p>
+      </div>
     </div>
-    <div class="text-center">
-      <h2 class="uppercase">Redes Sociales</h2>
-      <p>Instagram: @terralstudio</p>
-      <p>Facebook: @terralstudio</p>
+
+    <div class="mt-20 border-t border-white/10 pt-10">
+      <h2 class="text-center text-sm opacity-60">
+        Hecho por <a
+          href="https://rubentorres.vercel.app"
+          target="_blank"
+          class="text-accent hover:text-2xl transition-all duration-300 font-bold underline underline-offset-4 cursor-pointer"
+        >
+          Rubén Torres
+        </a> en Málaga
+      </h2>
     </div>
   </div>
-  <h2 class="text-center pb-10">
-    Hecho por <a
-      href="https://rubentorres.vercel.app"
-      target="_blank"
-      class="cursor-pointer hover:text-2xl transition-all duration-400"
-    >
-      <b class="text-accent">Rubén Torres</b>
-    </a> en Málaga
-  </h2>
-</section>
+</footer>
