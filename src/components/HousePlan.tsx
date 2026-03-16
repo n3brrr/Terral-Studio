@@ -70,11 +70,11 @@ export default function HousePlan() {
 
   return (
     <section className="text-white py-20" id="houseplan">
-      <h2 className="text-6xl font-bold px-10 md:text-8xl tracking-tighter mb-10 ">
+      <h2 className="text-4xl sm:text-6xl font-bold px-6 md:px-10 md:text-8xl tracking-tighter mb-10">
         Planos de la casa
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-10 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-10 items-start">
         {/* COLUMNA IZQUIERDA: LISTA */}
         <div className="flex flex-col">
           <ul className="flex flex-col border-t border-white/10">

@@ -109,21 +109,22 @@ export default function Reviews() {
       className="py-24 bg-background relative overflow-hidden"
       id="reviews"
     >
-      {/* Máscaras laterales para un efecto elegante */}
+      {/* Título fuera de la máscara para que sea siempre visible */}
+      <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-12 md:mb-20 tracking-tighter px-6 md:px-10">
+        Opiniones
+      </h2>
+
+      {/* Máscaras laterales solo en el carrusel */}
       <div
         className="relative w-full"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent)",
+            "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent)",
+            "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
         }}
       >
-        <h2 className="text-6xl md:text-8xl font-bold text-white mb-20 tracking-tighter px-10">
-          Opiniones
-        </h2>
-
-        <div className="flex flex-col gap-6 ">
+        <div className="flex flex-col gap-6">
           <VelocityRow baseVelocity={-0.2}>
             {REVIEWS.map((review) => (
               <ReviewCard

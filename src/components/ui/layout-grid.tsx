@@ -5,7 +5,7 @@ import { cn } from "../../lib/utils";
 
 export const LayoutGrid = ({ cards }: { cards: any[] }) => {
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4">
+    <div className="w-full h-full p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "relative overflow-hidden")}>
           <motion.div
@@ -17,7 +17,7 @@ export const LayoutGrid = ({ cards }: { cards: any[] }) => {
             <img
               src={card.thumbnail}
               alt="thumbnail"
-              className="object-cover w-full h-full rounded-xl"
+              className="object-cover w-full h-full rounded-xl aspect-video md:aspect-auto"
             />
           </motion.div>
         </div>

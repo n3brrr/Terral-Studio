@@ -99,7 +99,7 @@ const cards = [
 export default function Proyects() {
   return (
     <div className="h-full w-full bg-surface min-h-screen text-white">
-      <h2 className="text-6xl font-bold md:text-8xl tracking-tighter px-12 pt-12">
+      <h2 className="text-4xl sm:text-6xl font-bold md:text-8xl tracking-tighter px-6 md:px-12 pt-12">
         Proyectos
       </h2>
       <LayoutGrid cards={cards} />
