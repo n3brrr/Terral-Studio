@@ -118,10 +118,10 @@ export default function OutServices() {
   return (
     <section
       className="relative w-full min-h-screen bg-black py-24 overflow-hidden"
-      id="outservices"
+      id="services"
     >
       <div className="max-w-7xl mx-auto px-6 mb-12">
-        <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tighter">
           Nuestros Servicios.
         </h2>
       </div>
@@ -163,38 +163,36 @@ export default function OutServices() {
         ))}
       </div>
 
-      {/* CONTROLES FLOTANTES (Abajo a la izquierda) */}
-      <div className="absolute bottom-10 left-6 md:left-20 flex flex-col gap-6 z-40">
+      {/* CONTROLES FLOTANTES — fila única en mobile, separados en desktop */}
+      <div className="absolute bottom-6 md:bottom-10 left-6 right-6 md:left-20 md:right-20 flex justify-between items-center z-40">
         {/* Selector del 1 al 6 */}
-        <div className="flex gap-4 bg-black/50 backdrop-blur-md p-3 rounded-2xl border border-white/10">
+        <div className="flex gap-2 md:gap-4 bg-black/50 backdrop-blur-md p-2 md:p-3 rounded-2xl border border-white/10">
           {SERVICES_DATA.map((_, idx) => (
             <button
               key={idx}
               onClick={() => scrollToIndex(idx)}
-              className={`text-sm font-mono transition-all w-8 h-8 rounded-full flex items-center justify-center
+              className={`text-xs md:text-sm font-mono transition-all w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center
                 ${activeIndex === idx ? "bg-white text-black font-bold" : "text-white/40 hover:text-white hover:bg-white/10"}`}
             >
               {idx + 1}
             </button>
           ))}
         </div>
-      </div>
-      {/* Flechas */}
-      <div className="absolute bottom-10 right-6 md:right-20 z-40 flex gap-4">
-        {/* Flecha Izquierda */}
-        <button
-          onClick={() => scrollByArrow("left")}
-          className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all active:scale-95"
-        >
-          ←
-        </button>
-        {/* Flecha Derecha */}
-        <button
-          onClick={() => scrollByArrow("right")}
-          className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all active:scale-95"
-        >
-          →
-        </button>
+        {/* Flechas */}
+        <div className="flex gap-3 md:gap-4">
+          <button
+            onClick={() => scrollByArrow("left")}
+            className="w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all active:scale-95"
+          >
+            ←
+          </button>
+          <button
+            onClick={() => scrollByArrow("right")}
+            className="w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all active:scale-95"
+          >
+            →
+          </button>
+        </div>
       </div>
 
       {/* MODAL EXPANSIVO (El efecto Apple) */}
