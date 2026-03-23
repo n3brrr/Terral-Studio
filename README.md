@@ -4,7 +4,7 @@
 
 **Estudio de Arquitectura e Interiorismo de Vanguardia**
 
-[🚀 Demo](https://terral-studio-ruben.vercel.app/) - [🐛 Incidencias](https://github.com/n3brrr/Terral-Studio/issues) - [📖 Documentación](#documentation)
+[🚀 Demo](https://terral-studio.vercel.app/) - [🐛 Incidencias](https://github.com/n3brrr/Terral-Studio/issues) - [📖 Documentación](#documentation)
 
 </div>
 
