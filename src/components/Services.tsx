@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect, type RefObject } from "react";
+import { useState, useRef, useEffect, type RefObject } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScroll } from "framer-motion";
 import { button } from "framer-motion/client";
@@ -120,8 +120,8 @@ export default function OutServices() {
       className="relative w-full min-h-screen bg-black py-24 overflow-hidden"
       id="services"
     >
-      <div className="max-w-7xl mx-auto px-6 mb-12">
-        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tighter">
+      <div className="max-w-7xl mb-12">
+        <h2 className="text-4xl sm:text-6xl font-bold md:text-8xl tracking-tighter px-4 md:px-12 pt-12 text-white font-montserrat">
           Nuestros Servicios.
         </h2>
       </div>

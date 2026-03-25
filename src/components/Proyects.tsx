@@ -1,96 +1,92 @@
-"use client";
-import React from "react";
+("use client");
 import { LayoutGrid } from "./ui/layout-grid";
 
-const SkeletonOne = () => (
-  <div className="flex flex-col justify-end p-4">
-    <p className="font-bold text-white text-xl">Villa Brisa</p>
-    <p className="text-white/70">Reforma integral en Pedregalejo.</p>
-  </div>
-);
-
-const SkeletonTwo = () => (
-  <div className="flex flex-col justify-end p-4">
-    <p className="font-bold text-white text-xl">Villa Brisa</p>
-    <p className="text-white/70">Reforma integral en Pedregalejo.</p>
-  </div>
-);
-
-const SkeletonThree = () => (
-  <div className="flex flex-col justify-end p-4">
-    <p className="font-bold text-white text-xl">Villa Brisa</p>
-    <p className="text-white/70">Reforma integral en Pedregalejo.</p>
-  </div>
-);
-
-const SkeletonFour = () => (
-  <div className="flex flex-col justify-end p-4">
-    <p className="font-bold text-white text-xl">Villa Brisa</p>
-    <p className="text-white/70">Reforma integral en Pedregalejo.</p>
-  </div>
-);
-
-const SkeletonFive = () => (
-  <div className="flex flex-col justify-end p-4">
-    <p className="font-bold text-white text-xl">Villa Brisa</p>
-    <p className="text-white/70">Reforma integral en Pedregalejo.</p>
-  </div>
-);
-
-const SkeletonSix = () => (
-  <div className="flex flex-col justify-end p-4">
-    <p className="font-bold text-white text-xl">Villa Brisa</p>
-    <p className="text-white/70">Reforma integral en Pedregalejo.</p>
-  </div>
-);
-
-const SkeletonSeven = () => (
-  <div className="flex flex-col justify-end p-4">
-    <p className="font-bold text-white text-xl">Villa Brisa</p>
-    <p className="text-white/70">Reforma integral en Pedregalejo.</p>
+// Un solo componente para todos los contenidos
+const CardContent = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => (
+  <div className="flex flex-col justify-end p-4 h-full w-full">
+    <p className="font-bold text-white text-xl md:text-2xl">{title}</p>
+    <p className="text-white/70 text-sm md:text-base">{description}</p>
   </div>
 );
 
 const cards = [
   {
     id: 1,
-    content: <SkeletonOne />,
-    className: "md:col-span-1",
+    content: (
+      <CardContent
+        title="Villa Brisa"
+        description="Reforma integral en Pedregalejo."
+      />
+    ),
+    className: "md:col-span-1 ",
     thumbnail: "/photos/Villa/Villa-04.webp",
   },
   {
     id: 2,
-    content: <SkeletonTwo />,
+    content: (
+      <CardContent
+        title="Villa Brisa"
+        description="Diseño de interiores moderno."
+      />
+    ),
     className: "md:col-span-2",
     thumbnail: "/photos/Villa/Villa-02.webp",
   },
   {
     id: 3,
-    content: <SkeletonThree />,
+    content: (
+      <CardContent
+        title="Villa Brisa"
+        description="Reforma integral en Pedregalejo."
+      />
+    ),
     className: "md:col-span-2",
     thumbnail: "/photos/Villa/Villa-03.webp",
   },
   {
     id: 4,
-    content: <SkeletonFour />,
+    content: (
+      <CardContent
+        title="Villa Brisa"
+        description="Reforma integral en Pedregalejo."
+      />
+    ),
     className: "md:col-span-1",
     thumbnail: "/photos/Villa/Villa-07.webp",
   },
   {
     id: 5,
-    content: <SkeletonFive />,
-    className: "md:col-span-3",
+    content: (
+      <CardContent title="Villa Brisa" description="Proyecto destacado." />
+    ),
+    className: "md:col-span-3", // La más grande
     thumbnail: "/photos/Villa/Villa-01.webp",
   },
   {
     id: 6,
-    content: <SkeletonSix />,
+    content: (
+      <CardContent
+        title="Villa Brisa"
+        description="Reforma integral en Pedregalejo."
+      />
+    ),
     className: "md:col-span-1",
     thumbnail: "/photos/Villa/Villa-05.webp",
   },
   {
     id: 7,
-    content: <SkeletonSeven />,
+    content: (
+      <CardContent
+        title="Villa Brisa"
+        description="Reforma integral en Pedregalejo."
+      />
+    ),
     className: "md:col-span-2",
     thumbnail: "/photos/Villa/Villa-06.webp",
   },
@@ -98,11 +94,17 @@ const cards = [
 
 export default function Proyects() {
   return (
-    <div className="h-full w-full bg-surface min-h-screen text-white">
-      <h2 className="text-4xl sm:text-6xl font-bold md:text-8xl tracking-tighter px-6 md:px-12 pt-12">
+    <section
+      className="h-full w-full bg-surface min-h-screen text-white py-20 pointer-events-none"
+      id="proyectos"
+    >
+      <h2 className="text-4xl sm:text-6xl font-bold md:text-8xl tracking-tighter px-6 md:px-12 mb-10">
         Proyectos
       </h2>
-      <LayoutGrid cards={cards} />
-    </div>
+
+      <div className="w-full">
+        <LayoutGrid cards={cards} />
+      </div>
+    </section>
   );
 }

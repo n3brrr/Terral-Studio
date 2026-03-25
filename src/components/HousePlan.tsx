@@ -52,12 +52,6 @@ const ESTANCIAS = [
     img: "/photos/HousePlan/baño2-glow.webp",
   },
   {
-    id: "pasillo",
-    name: "Pasillo y armario",
-    size: "10m²",
-    img: "/photos/HousePlan/pasillo-glow.webp",
-  },
-  {
     id: "lavanderia",
     name: "Lavanderia",
     size: "10m²",
@@ -70,7 +64,7 @@ export default function HousePlan() {
 
   return (
     <section className="text-white py-20" id="houseplan">
-      <h2 className="text-4xl sm:text-6xl font-bold px-6 md:px-10 md:text-8xl tracking-tighter mb-10">
+      <h2 className="text-4xl sm:text-6xl font-bold px-6 md:px-10 md:text-8xl tracking-tighter mb-10 font-montserrat">
         Planos de la casa
       </h2>
 
@@ -115,6 +109,7 @@ export default function HousePlan() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
               className="w-full h-full object-contain"
+              alt="Planos de la casa"
             />
           </AnimatePresence>
         </div>

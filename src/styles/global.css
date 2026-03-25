@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  
+}
+
 @theme {
   --color-background: #0f1115;
   --color-surface: #1a1d23;
@@ -29,4 +33,27 @@
       opacity: 0;
     }
   }
+}
+
+/* Declarar las fuentes */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Asignarlas a variables */
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-syne: "Inter", sans-serif;
 }
