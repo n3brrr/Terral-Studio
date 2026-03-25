@@ -94,7 +94,7 @@ export default function HousePlan() {
           </ul>
         </div>
 
-        {/* COLUMNA DERECHA: PLANO INTERACTIVO (EL CAMBIO) */}
+        {/* COLUMNA DERECHA: PLANO INTERACTIVO */}
         <div className="relative rounded-2xl overflow-hidden bg-black/20 aspect-square shadow-2xl flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.img
