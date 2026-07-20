@@ -136,7 +136,7 @@ export default function OutServices() {
             key={card.id}
             layoutId={`card-${card.id}`}
             onClick={() => setActiveCard(card)}
-            className="snap-start shrink-0 w-[85vw] md:w-[600px] h-[500px] rounded-3xl overflow-hidden cursor-pointer relative group"
+            className="snap-start shrink-0 w-[85vw] md:w-150 h-125 rounded-3xl overflow-hidden cursor-pointer relative group"
           >
             {/* Imagen de fondo de la tarjeta */}
             <img
