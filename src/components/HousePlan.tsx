@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const ESTANCIAS = [
   {
@@ -62,6 +61,10 @@ const ESTANCIAS = [
 export default function HousePlan() {
   const [activeId, setActiveId] = useState<string | null>(null);
 
+  const currentSrc = activeId
+    ? ESTANCIAS.find((e) => e.id === activeId)?.img
+    : "/photos/HousePlan/HousePlan.webp";
+
   return (
     <section className="text-white py-20" id="houseplan">
       <h2 className="text-4xl sm:text-6xl font-bold px-6 md:px-10 md:text-8xl tracking-tighter mb-10 font-montserrat">
@@ -69,7 +72,6 @@ export default function HousePlan() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-10 items-start">
-        {/* COLUMNA IZQUIERDA: LISTA */}
         <div className="flex flex-col">
           <ul className="flex flex-col border-t border-white/10">
             {ESTANCIAS.map((estancia) => (
@@ -94,24 +96,13 @@ export default function HousePlan() {
           </ul>
         </div>
 
-        {/* COLUMNA DERECHA: PLANO INTERACTIVO */}
         <div className="relative rounded-2xl overflow-hidden bg-black/20 aspect-square shadow-2xl flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={activeId || "HousePlan"}
-              src={
-                activeId
-                  ? ESTANCIAS.find((e) => e.id === activeId)?.img
-                  : "/photos/HousePlan/HousePlan.webp"
-              }
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="w-full h-full object-contain"
-              alt="Planos de la casa"
-            />
-          </AnimatePresence>
+          <img
+            key={activeId || "default"}
+            src={currentSrc}
+            className="w-full h-full object-contain animate-fadeIn"
+            alt="Planos de la casa"
+          />
         </div>
       </div>
     </section>
