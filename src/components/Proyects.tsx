@@ -96,7 +96,7 @@ export default function Proyects() {
   return (
     <section
       className="h-full w-full bg-surface min-h-screen text-white py-20 pointer-events-none"
-      id="proyectos"
+      id="proyects"
     >
       <h2 className="text-4xl sm:text-6xl font-bold md:text-8xl tracking-tighter px-6 md:px-12 mb-10">
         Proyectos
