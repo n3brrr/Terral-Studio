@@ -1,8 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, type RefObject } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useScroll } from "framer-motion";
-import { button } from "framer-motion/client";
 
 const SERVICES_DATA = [
   {
